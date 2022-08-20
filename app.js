@@ -22,4 +22,4 @@ mongoose.connect(process.env.DB_CONNECT, () => {
   console.log("connected to DB!");
 });
 
-app.listen(3000, () => console.log("Server Running...."));
+app.listen(3000, () => console.log("Server Running on post 3000"));
