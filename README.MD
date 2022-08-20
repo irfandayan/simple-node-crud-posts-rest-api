@@ -1,4 +1,4 @@
-<h2>Simple Node.js API </h2>
+<h2>Simple Node.js REST API - CRUD </h2>
 
 <ul>
 <li>Express.js</li>
