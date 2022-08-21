@@ -5,6 +5,9 @@ import cors from "cors";
 
 import postsRoutes from "./routes/posts.js";
 
+dotenv.config();
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 // Middlewares
@@ -21,4 +24,4 @@ mongoose.connect(process.env.DB_CONNECT, () => {
   console.log("connected to DB!");
 });
 
-app.listen(3000, () => console.log("Server Running on post 3000"));
+app.listen(port, console.log(`Server running on port ${port}`));
