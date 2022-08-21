@@ -4,12 +4,6 @@ import Post from "../models/Post.js";
 const router = express.Router();
 
 // Routes
-// home page
-router.get("", async (req, res) => {
-  res.send(`<h1>Please use postman to make request to get posts</h1>`);
-});
-
-// Routes
 // Get all the posts
 router.get("/", async (req, res) => {
   try {
@@ -42,6 +36,7 @@ router.get("/:postId", async (req, res) => {
     const post = await Post.findById(req.params.postId);
     res.json(post);
   } catch (error) {
+    console.log("i was here 2");
     res.json({ message: error });
   }
 });

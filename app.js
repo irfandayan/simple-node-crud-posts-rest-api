@@ -4,9 +4,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 
 import postsRoutes from "./routes/posts.js";
+import indexRoute from "./routes/index.js";
 
 dotenv.config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(cors());
 // app.use("/posts", () => {
 //   console.log("This is middleware running");
 // });
-app.use("/", postsRoutes);
+app.use("/", indexRoute);
 app.use("/posts", postsRoutes);
 
 // Connect to DB
