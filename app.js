@@ -16,6 +16,7 @@ app.use(cors());
 // app.use("/posts", () => {
 //   console.log("This is middleware running");
 // });
+app.use("/", postsRoutes);
 app.use("/posts", postsRoutes);
 
 // Connect to DB

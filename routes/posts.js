@@ -4,6 +4,12 @@ import Post from "../models/Post.js";
 const router = express.Router();
 
 // Routes
+// home page
+router.get("", async (req, res) => {
+  res.send(`<h1>Please use postman to make request to get posts</h1>`);
+});
+
+// Routes
 // Get all the posts
 router.get("/", async (req, res) => {
   try {
