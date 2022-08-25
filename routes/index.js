@@ -1,12 +1,9 @@
 import express from "express";
+import { home } from "../controllers/index.js";
 const router = express.Router();
 
 // Routes
 // home page
-router.get("/", async (req, res) => {
-  res.send(
-    `<h1>This is an API so please use postman to make requests to get posts</h1>`
-  );
-});
+router.get("/", home);
 
 export default router;
