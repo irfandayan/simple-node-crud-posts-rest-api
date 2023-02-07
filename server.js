@@ -13,7 +13,7 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 // app.use("/posts", () => {
 //   console.log("This is middleware running");
 // });

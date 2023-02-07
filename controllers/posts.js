@@ -29,7 +29,6 @@ export const getSpecificPost = async (req, res) => {
     const post = await Post.findById(req.params.postId);
     res.json(post);
   } catch (error) {
-    console.log("i was here 2");
     res.json({ message: error });
   }
 };
